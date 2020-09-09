@@ -36,7 +36,7 @@
     <property name="node.js.selected.package.eslint" value="$PROJECT_DIR$/node_modules/eslint" />
     <property name="node.js.selected.package.standard" value="" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="settings.javascript.linters.eslint" />
+    <property name="settings.editor.selected.configurable" value="Settings.JavaScript" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -47,7 +47,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1599654936426</updated>
-      <workItem from="1599654937761" duration="1509000" />
+      <workItem from="1599654937761" duration="1547000" />
     </task>
     <servers />
   </component>
@@ -60,9 +60,9 @@
     </ignored-roots>
   </component>
   <component name="WindowStateProjectService">
-    <state x="221" y="77" key="SettingsEditor" timestamp="1599656510536">
+    <state x="221" y="77" key="SettingsEditor" timestamp="1599656548952">
       <screen x="0" y="23" width="1440" height="831" />
     </state>
-    <state x="221" y="77" key="SettingsEditor/0.23.1440.831@0.23.1440.831" timestamp="1599656510536" />
+    <state x="221" y="77" key="SettingsEditor/0.23.1440.831@0.23.1440.831" timestamp="1599656548952" />
   </component>
 </project>
