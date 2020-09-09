@@ -31,12 +31,15 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
+    <property name="node.js.detected.package.stylelint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.standard" value="project" />
+    <property name="node.js.path.for.package.stylelint" value="project" />
     <property name="node.js.selected.package.eslint" value="$PROJECT_DIR$/node_modules/eslint" />
     <property name="node.js.selected.package.standard" value="" />
+    <property name="node.js.selected.package.stylelint" value="" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="Settings.JavaScript" />
+    <property name="settings.editor.selected.configurable" value="tasks" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -47,7 +50,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1599654936426</updated>
-      <workItem from="1599654937761" duration="1547000" />
+      <workItem from="1599654937761" duration="1740000" />
     </task>
     <servers />
   </component>
@@ -60,9 +63,13 @@
     </ignored-roots>
   </component>
   <component name="WindowStateProjectService">
-    <state x="221" y="77" key="SettingsEditor" timestamp="1599656548952">
+    <state x="485" y="275" key="#com.intellij.tools.ToolEditorDialog" timestamp="1599656651389">
       <screen x="0" y="23" width="1440" height="831" />
     </state>
-    <state x="221" y="77" key="SettingsEditor/0.23.1440.831@0.23.1440.831" timestamp="1599656548952" />
+    <state x="485" y="275" key="#com.intellij.tools.ToolEditorDialog/0.23.1440.831@0.23.1440.831" timestamp="1599656651389" />
+    <state x="221" y="77" key="SettingsEditor" timestamp="1599656664007">
+      <screen x="0" y="23" width="1440" height="831" />
+    </state>
+    <state x="221" y="77" key="SettingsEditor/0.23.1440.831@0.23.1440.831" timestamp="1599656664007" />
   </component>
 </project>

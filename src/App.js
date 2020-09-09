@@ -5,6 +5,7 @@ class App extends React.Component {
         const {name} = this.props;
         return (
             <>
+                {/* eslint-disable-next-line react/jsx-no-literals */}
                 <h1>Hello {name}</h1>
             </>
         );
