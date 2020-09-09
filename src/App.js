@@ -1,7 +1,17 @@
-console.warn("test");
 
-function addition(a, b) {
-    console.log(a + b);
+import React from "react";
+
+class App extends React.Component {
+    render() {
+        const { name } = this.props;
+        return (
+            <>
+                <h1>
+                    Hello {name}
+                </h1>
+            </>
+        );
+    }
 }
 
-addition(2, 3);
+export default App;
