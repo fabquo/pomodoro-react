@@ -20,3 +20,5 @@ The goal is to create a simple pomodoro timer in ReactJS from scratch.
 ## Final result
 
 You can see the final result of my project by following .: LINK :.
+
+Have fun !
