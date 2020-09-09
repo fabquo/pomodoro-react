@@ -1,7 +1,7 @@
 console.warn("test");
 
-function addition(a, b){
+function addition(a, b) {
     console.log(a + b);
-};
+}
 
-addition(2,3);
+addition(2, 3);
