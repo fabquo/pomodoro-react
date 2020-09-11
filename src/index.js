@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import App from "./App";
+import App from "./components/app/App";
 
 const mountNode = document.querySelector("#app");
-ReactDOM.render(<App name={"Jane"} />, mountNode);
+
+ReactDOM.render(<App />, mountNode);
