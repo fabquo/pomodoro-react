@@ -1,6 +1,7 @@
 import React from "react";
 
 const StartStop = ({isActive, setIsActive}) => {
+
     const toggle = () => {
         setIsActive(!isActive);
     };

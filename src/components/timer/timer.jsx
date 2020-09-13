@@ -1,28 +1,54 @@
 import React, {useState, useEffect} from "react";
-import AddTime from "../controls/addtime";
-import MinusTime from "../controls/minustime";
+import AddMinute from "../controls/addminute";
+import AddSeconds from "../controls/addseconds";
+import MinusMinute from "../controls/minusminute";
+import MinusSeconds from "../controls/minusseconds";
 import StartStop from "../controls/startstop";
-//import Reset from "../controls/reset";
+import Reset from "../controls/reset";
+import SaveTimer from "../controls/savetimer";
 
 const Timer = () => {
-    const [minutes, setMinutes] = useState(10);
-    const [seconds, setSeconds] = useState(15);
+    const [minutes, setMinutes] = useState(0);
+    const [seconds, setSeconds] = useState(0);
     const [isActive, setIsActive] = useState(false);
+    const [startMinutes, setStartMinutes] = useState(0);
+    const [startSeconds, setStartSeconds] = useState(0);
 
     useEffect(() => {
         let interval = null;
         if (isActive) {
-            interval = setTimeout(() => {
-                setSeconds(seconds - 1);
-            }, 1000);
-        } else {
-            clearTimeout(interval);
+            if (seconds > 0) {
+                interval = setTimeout(() => {
+                    setSeconds(seconds - 1);
+                }, 1000);
+            } else if (seconds === 0 && minutes > 0) {
+                interval = setTimeout(() => {
+                    setSeconds(seconds + 59);
+                    setMinutes(minutes - 1);
+                }, 1000);
+            } else {
+                clearTimeout(interval);
+                setIsActive(!isActive);
+            }
         }
     });
 
     return (
         <div>
-            <AddTime minutes={minutes} setMinutes={setMinutes} />
+            <AddMinute
+                minutes={minutes}
+                setMinutes={setMinutes}
+                seconds={seconds}
+                setSeconds={setSeconds}
+                isActive={isActive}
+            />
+            <AddSeconds
+                minutes={minutes}
+                setMinutes={setMinutes}
+                seconds={seconds}
+                setSeconds={setSeconds}
+                isActive={isActive}
+            />
             <h1>
                 {minutes < 10 && "0"}
                 {minutes}
@@ -30,8 +56,42 @@ const Timer = () => {
                 {seconds < 10 && "0"}
                 {seconds}
             </h1>
-            <MinusTime minutes={minutes} setMinutes={setMinutes} />
+            <MinusMinute
+                minutes={minutes}
+                setMinutes={setMinutes}
+                seconds={seconds}
+                setSeconds={setSeconds}
+                isActive={isActive}
+            />
+            <MinusSeconds
+                minutes={minutes}
+                setMinutes={setMinutes}
+                seconds={seconds}
+                setSeconds={setSeconds}
+                isActive={isActive}
+            />
             <StartStop isActive={isActive} setIsActive={setIsActive} />
+            <Reset
+                minutes={minutes}
+                setMinutes={setMinutes}
+                seconds={seconds}
+                setSeconds={setSeconds}
+                startMinutes={startMinutes}
+                setStartMinutes={setStartMinutes}
+                startSeconds={startSeconds}
+                setStartSeconds={setStartSeconds}
+                isActive={isActive}
+                setIsActive={setIsActive}
+            />
+            <SaveTimer
+                minutes={minutes}
+                seconds={seconds}
+                isActive={isActive}
+                startMinutes={startMinutes}
+                setStartMinutes={setStartMinutes}
+                startSeconds={startSeconds}
+                setStartSeconds={setStartSeconds}
+            />
         </div>
     );
 };
