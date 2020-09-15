@@ -2,6 +2,9 @@ import React, {useEffect} from "react";
 import ButtonTimer from "../controls/button";
 
 const Timer = props => {
+    const audio = new Audio(
+        "http://www.hprops.com/sounds/KJH_EctoApproach&Stop.mp3",
+    );
     // Activate timer or stop it
     const toggle = () => {
         props.setIsActive(!props.isActive);
@@ -23,6 +26,7 @@ const Timer = props => {
             } else {
                 clearTimeout(interval);
                 props.setIsActive(!props.isActive);
+                audio.play();
             }
         }
     });

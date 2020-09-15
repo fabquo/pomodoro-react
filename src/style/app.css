@@ -15,7 +15,7 @@ body{
 .appTitle{
     font-size: 50px;
     text-align: center;
-    margin-block-start: 5%;
+    margin-block-start: 10%;
     margin-block-end: 0em;
     margin-inline-start: 0px;
     margin-inline-end: 0px;
@@ -28,13 +28,13 @@ body{
     background: linear-gradient(grey, black);
 }
 .timerCount--timer{
-    margin-top: 20%;
+    margin-top: 40%;
     position: relative;
     text-align: center;
 }
 .startStop{
     position: absolute;
-    margin-top: 20%;
+    margin-top: 40%;
     top: 100%;
     left: 50%;
     margin-left: auto;
@@ -71,7 +71,7 @@ body{
     text-shadow: 5px 5px 5px black;
 }
 .modalTips{
-    margin-top: 5%;
+    margin-top: 20%;
     margin-left:10px;
     margin-right: 10px;
     font-size: 14px;
@@ -83,7 +83,7 @@ body{
     font-size: 50px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 10%;
+    margin-top: 30%;
 }
 .modalTimer h2{
     margin-block-start: 0.0em;
@@ -94,7 +94,7 @@ body{
 .sousModal{
     position:relative;
     display: grid;
-    margin-top: 10%;
+    margin-top: 30%;
     width: 80%;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto;
@@ -149,6 +149,7 @@ body{
     font-size :40px;
 }
 .modalTips{
+    margin-top: 5%;
     font-size: 24px;
 }
 .modalTimer{
