@@ -108,6 +108,7 @@ const Modal = props => {
                     }
                 </p>
                 <p>{"Use Reset button to reload previous saved timer"}</p>
+                <p>{"You can set a timer for your break if you want ;)"}</p>
             </div>
 
             <div className={"modalTimer"}>
