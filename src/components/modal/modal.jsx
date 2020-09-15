@@ -6,16 +6,6 @@ const Modal = props => {
     const [mouseDown, setMouseDown] = useState(false);
     const [mouseUp, setMouseUp] = useState(true);
 
-    const addMouseDown = () => {
-        setMouseDown(!mouseDown);
-        setMouseUp(!mouseUp);
-    };
-
-    const addMouseUp = () => {
-        setMouseUp(!mouseUp);
-        setMouseDown(!mouseDown);
-    };
-
     const addMinute = () => {
         if (props.minutes < 60) {
             props.setMinutes(props.minutes + 1);
@@ -95,6 +85,7 @@ const Modal = props => {
     };
 
     const buttonStyle = "btn modalButton";
+
     return (
         <div
             className={"modal"}
@@ -104,7 +95,7 @@ const Modal = props => {
             <div className={"modalTips"}>
                 <p>
                     {
-                        "Use Save & Start button to save actual timer to default timer et run it !"
+                        "Use Save & Go! button to save actual timer to default timer and run it !"
                     }
                 </p>
                 <p>{"Use Reset button to reload previous saved timer"}</p>
