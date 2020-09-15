@@ -64,6 +64,8 @@
       <workItem from="1599654937761" duration="3365000" />
       <workItem from="1599723147099" duration="2874000" />
       <workItem from="1599749208021" duration="21770000" />
+      <workItem from="1600154462296" duration="10134000" />
+      <workItem from="1600169140995" duration="3732000" />
     </task>
     <servers />
   </component>
@@ -76,10 +78,10 @@
     </ignored-roots>
   </component>
   <component name="WindowStateProjectService">
-    <state x="184" y="100" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1599761190951">
+    <state x="184" y="100" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1600170745805">
       <screen x="0" y="23" width="1440" height="831" />
     </state>
-    <state x="184" y="100" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.831@0.23.1440.831" timestamp="1599761190951" />
+    <state x="184" y="100" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.831@0.23.1440.831" timestamp="1600170745805" />
     <state x="458" y="192" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1599828498081">
       <screen x="0" y="23" width="1440" height="831" />
     </state>
@@ -100,9 +102,9 @@
       <screen x="0" y="23" width="1440" height="831" />
     </state>
     <state width="600" height="428" key="javadoc.popup/0.23.1440.831@0.23.1440.831" timestamp="1599828704451" />
-    <state x="385" y="178" width="670" height="676" key="search.everywhere.popup" timestamp="1599818118453">
+    <state x="385" y="178" width="670" height="676" key="search.everywhere.popup" timestamp="1600171316906">
       <screen x="0" y="23" width="1440" height="831" />
     </state>
-    <state x="385" y="178" width="670" height="676" key="search.everywhere.popup/0.23.1440.831@0.23.1440.831" timestamp="1599818118453" />
+    <state x="385" y="178" width="670" height="676" key="search.everywhere.popup/0.23.1440.831@0.23.1440.831" timestamp="1600171316906" />
   </component>
 </project>

@@ -3,7 +3,18 @@ import ButtonTimer from "../controls/button";
 
 const Modal = props => {
     // Add 1 minutes to timer
-    const [displayModal, setDisplayModal] = useState(props.isActive);
+    const [mouseDown, setMouseDown] = useState(false);
+    const [mouseUp, setMouseUp] = useState(true);
+
+    const addMouseDown = () => {
+        setMouseDown(!mouseDown);
+        setMouseUp(!mouseUp);
+    };
+
+    const addMouseUp = () => {
+        setMouseUp(!mouseUp);
+        setMouseDown(!mouseDown);
+    };
 
     const addMinute = () => {
         if (props.minutes < 60) {
@@ -79,48 +90,81 @@ const Modal = props => {
         props.setSeconds(props.startSeconds);
     };
 
-    const buttonStyle = "btn";
+    const secondsToNull = () => {
+        props.setSeconds(0);
+    };
+
+    const buttonStyle = "btn modalButton";
     return (
         <div
-            className={"Modal"}
+            className={"modal"}
             id={"Modal"}
-            style={{display: props.isActive ? "none" : "block"}}>
-            <ButtonTimer
-                buttonClassName={props.isActive ? "disabled" : buttonStyle}
-                buttonName={"+1 Min"}
-                buttonActive={props.isActive}
-                handleClickFunction={addMinute}
-            />
-            <ButtonTimer
-                buttonClassName={props.isActive ? "disabled" : buttonStyle}
-                buttonName={"+10 Sec"}
-                buttonActive={props.isActive}
-                handleClickFunction={addSeconds}
-            />
-            <ButtonTimer
-                buttonClassName={props.isActive ? "disabled" : buttonStyle}
-                buttonName={"-1 Min"}
-                buttonActive={props.isActive}
-                handleClickFunction={minusMinute}
-            />
-            <ButtonTimer
-                buttonClassName={props.isActive ? "disabled" : buttonStyle}
-                buttonName={"-10 Sec"}
-                buttonActive={props.isActive}
-                handleClickFunction={minusSeconds}
-            />
-            <ButtonTimer
-                buttonClassName={props.isActive ? "disabled" : buttonStyle}
-                buttonName={"Reset"}
-                buttonActive={props.isActive}
-                handleClickFunction={reset}
-            />
-            <ButtonTimer
-                buttonClassName={props.isActive ? "disabled" : buttonStyle}
-                buttonName={"Save & go!"}
-                buttonActive={props.isActive}
-                handleClickFunction={save}
-            />
+            style={{display: props.isActive ? "none" : ""}}>
+            <h1 className={"modalTitle"}>{"Time to take a break ! "}</h1>
+            <div className={"modalTips"}>
+                <p>
+                    {
+                        "Use Save & Start button to save actual timer to default timer et run it !"
+                    }
+                </p>
+                <p>{"Use Reset button to reload previous saved timer"}</p>
+            </div>
+
+            <div className={"modalTimer"}>
+                <h2>
+                    {props.minutes < 10 && "0"}
+                    {props.minutes}
+                    {":"}
+                    {props.seconds < 10 && "0"}
+                    {props.seconds}
+                </h2>
+            </div>
+            <div className={"sousModal"}>
+                <ButtonTimer
+                    buttonClassName={props.isActive ? "disabled" : buttonStyle}
+                    buttonName={"+1 Min"}
+                    buttonActive={props.isActive}
+                    handleClickFunction={addMinute}
+                />
+                <ButtonTimer
+                    buttonClassName={props.isActive ? "disabled" : buttonStyle}
+                    buttonName={"+10 Sec"}
+                    buttonActive={props.isActive}
+                    handleClickFunction={addSeconds}
+                />
+                <ButtonTimer
+                    buttonClassName={props.isActive ? "disabled" : buttonStyle}
+                    buttonName={"Save & go!"}
+                    buttonActive={props.isActive}
+                    handleClickFunction={save}
+                />
+                <ButtonTimer
+                    buttonClassName={props.isActive ? "disabled" : buttonStyle}
+                    buttonName={"-1 Min"}
+                    buttonActive={props.isActive}
+                    handleClickFunction={minusMinute}
+                />
+                <ButtonTimer
+                    buttonClassName={props.isActive ? "disabled" : buttonStyle}
+                    buttonName={"-10 Sec"}
+                    buttonActive={props.isActive}
+                    handleClickFunction={minusSeconds}
+                />
+                <ButtonTimer
+                    buttonClassName={props.isActive ? "disabled" : buttonStyle}
+                    buttonName={"Reset"}
+                    buttonActive={props.isActive}
+                    handleClickFunction={reset}
+                />
+                <ButtonTimer
+                    buttonClassName={
+                        props.isActive ? "disabled" : `${buttonStyle} setToNull`
+                    }
+                    buttonName={"Sec to 0"}
+                    buttonActive={"props.isActive"}
+                    handleClickFunction={secondsToNull}
+                />
+            </div>
         </div>
     );
 };

@@ -28,10 +28,10 @@ const Timer = props => {
     });
 
     return (
-        <div>
+        <div className={"startStop"}>
             <ButtonTimer
-                buttonClassName={"startStop"}
-                buttonName={props.isActive ? "Stop" : "Start"}
+                buttonClassName={"startStop__button"}
+                buttonName={props.isActive ? "STOP" : "START"}
                 handleClickFunction={toggle}
             />
         </div>

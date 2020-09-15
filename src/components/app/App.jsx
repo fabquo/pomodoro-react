@@ -1,10 +1,10 @@
 import React, {useState} from "react";
 import Timer from "../timer/timer";
 import Modal from "../modal/modal";
-import '../../style/normalize.css';
-import '../../style/app.css';
+import "../../style/normalize.css";
+import "../../style/app.css";
 const App = () => {
-    const [minutes, setMinutes] = useState(0);
+    const [minutes, setMinutes] = useState(5);
     const [seconds, setSeconds] = useState(0);
     const [isActive, setIsActive] = useState(false);
     const [startMinutes, setStartMinutes] = useState(0);
@@ -12,23 +12,24 @@ const App = () => {
 
     return (
         <div>
-            <div className="timerCount">
-            <h1 className="timerCount--title">
-                {minutes < 10 && "0"}
-                {minutes}
-                {":"}
-                {seconds < 10 && "0"}
-                {seconds}
-            </h1>
-            
-            <Timer
-                isActive={isActive}
-                setIsActive={setIsActive}
-                minutes={minutes}
-                setMinutes={setMinutes}
-                seconds={seconds}
-                setSeconds={setSeconds}
-            />
+            <div className={"timerCount"}>
+                <h2 className={"appTitle"}>Let's Work !</h2>
+                <h1 className={"timerCount--timer"}>
+                    {minutes < 10 && "0"}
+                    {minutes}
+                    {":"}
+                    {seconds < 10 && "0"}
+                    {seconds}
+                </h1>
+
+                <Timer
+                    isActive={isActive}
+                    setIsActive={setIsActive}
+                    minutes={minutes}
+                    setMinutes={setMinutes}
+                    seconds={seconds}
+                    setSeconds={setSeconds}
+                />
             </div>
             <Modal
                 minutes={minutes}
