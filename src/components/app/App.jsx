@@ -4,14 +4,14 @@ import Modal from "../modal/modal";
 import "../../style/normalize.css";
 import "../../style/app.css";
 const App = () => {
-    const [minutes, setMinutes] = useState(5);
+    const [minutes, setMinutes] = useState(25);
     const [seconds, setSeconds] = useState(0);
     const [isActive, setIsActive] = useState(false);
     const [startMinutes, setStartMinutes] = useState(0);
     const [startSeconds, setStartSeconds] = useState(0);
     const [appTitle, setAppTitle] = useState("Let's work !");
-
     const [cooldown, setCooldown] = useState(100);
+
     const timeToGo =
         ((minutes * 60 + seconds) / (startMinutes * 60 + startSeconds)) * 100;
     const titleUpdate = () => {
@@ -36,6 +36,9 @@ const App = () => {
     const styleWidth = {
         width: `${cooldown}%`,
     };
+    const changeClassName = () => {
+
+    }
 
     return (
         <div>
