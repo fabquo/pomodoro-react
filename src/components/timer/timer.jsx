@@ -1,10 +1,9 @@
 import React, {useEffect} from "react";
 import ButtonTimer from "../controls/button";
+import soundfile from "../../medias/alarm.mp3";
 
 const Timer = props => {
-    const audio = new Audio(
-        "http://www.hprops.com/sounds/KJH_EctoApproach&Stop.mp3",
-    );
+    const audio = new Audio(soundfile);
     // Activate timer or stop it
     const toggle = () => {
         props.setIsActive(!props.isActive);
