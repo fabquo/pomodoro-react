@@ -52,11 +52,13 @@ body{
     border-radius: 10px;
     padding: 10px;
     background: linear-gradient(grey, black);
+    user-select: none;
 }
 .startStop__button{
     font-size: 30px;
     font-weight: 700;
     text-align: center;
+    user-select: none;
 }
 .startStop__button:hover{
     color:lightgrey;
@@ -117,6 +119,7 @@ body{
     cursor: default;
     border-radius: 10px;
     background: linear-gradient(grey, black);
+    user-select: none;
 }
 .modalButton:active{
     background: linear-gradient(black, grey);
@@ -186,4 +189,54 @@ body{
 .setToNull{
     grid-column: 3/5;
 }
+}
+@media screen and (min-height: 280px) and (max-height: 700px) and (orientation:landscape) {
+    .timerBackground{
+        height: 30%;
+    }
+    .appTitle{
+        padding-top: 3%;
+    }
+    .timerCount--timer{
+        margin-top: 3%;
+    }
+    .startStop{
+        margin-top: 5%;
+    }
+    .modalTitle{
+        margin-top: 2%;
+    }
+
+    .modalTips{
+        margin-top: 2%;
+    }
+    .modalTips p{
+        line-height: 0.7;
+    }
+    .modalTimer{
+        margin-top: 0;
+    }
+    .sousModal{
+        margin-top: 0;
+    }
+    .modalButton{
+        margin-top: 2px;
+    }
+}
+@media screen and (min-height: 768px) and (orientation:landscape) {
+    .modalTitle{
+        margin-top: 5%;
+    }
+    .modalTips{
+        margin-top: 5%;
+    }
+    .modalTimer{
+        margin-top: 10%;
+    }
+    .timerCount--timer{
+        margin-top: 15%;
+    }
+    .startStop{
+        margin-top: 15%;
+    }
 }
