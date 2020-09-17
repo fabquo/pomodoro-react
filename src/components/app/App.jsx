@@ -11,7 +11,6 @@ const App = () => {
     const [startSeconds, setStartSeconds] = useState(0);
     const [appTitle, setAppTitle] = useState("Let's work !");
     const [cooldown, setCooldown] = useState(100);
-    const [ticSound, setTicSound] = useState(true);
 
     const timeToGo =
         ((minutes * 60 + seconds) / (startMinutes * 60 + startSeconds)) * 100;
@@ -61,8 +60,6 @@ const App = () => {
                     setMinutes={setMinutes}
                     seconds={seconds}
                     setSeconds={setSeconds}
-                    ticSound={ticSound}
-                    setTicSound={setTicSound}
                 />
             </div>
             <Modal
