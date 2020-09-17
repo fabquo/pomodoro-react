@@ -39,7 +39,6 @@ The default timer is set to 5 minutes.
 1. A magnifical title on the top with a reverse progress bar !
 2. THE timer !
 3. The stop button to stop the timer and display the modal to reconfigure a new timer
-4. The TIC/TAC / Mute button to enable clock sound or not
 
 When the timer hit 00:00, the timer automatically stop and the modal screen pop-up
 
